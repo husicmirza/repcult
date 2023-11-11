@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <main className="app">
           <Nav />
-          <div className="h-[100vh]">{children}</div>
+          <div className="w-full">{children}</div>
           <Footer />
         </main>
       </body>
