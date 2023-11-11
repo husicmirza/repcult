@@ -11,7 +11,7 @@ const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center w-full mb-16 pt-3 uppercase font-semibold text-white">
+    <nav className="flex justify-between items-center w-full mb-16 pt-3 uppercase font-semibold text-white container mx-auto">
       <Link href={`/`} className="font-bold text-2xl">
         Rapcult
       </Link>

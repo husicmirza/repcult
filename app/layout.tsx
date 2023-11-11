@@ -16,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="app">
+        <main className="">
           <Nav />
-          <div className="w-full">{children}</div>
+          <div className="container mx-auto ">{children}</div>
           <Footer />
         </main>
       </body>

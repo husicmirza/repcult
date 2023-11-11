@@ -23,7 +23,7 @@ export default function AboutUs() {
         <h2 className="text-2xl uppercase font-bold text-white">
           Amazing benefits
         </h2>
-        <div className="px-10 py-6 w-full">
+        <div className="py-6 w-full flex justify-center">
           <div className="grid grid-cols-3 gap-10">
             {Array.from({ length: 6 }, (_, index) => {
               return <AmazingBenefitCard key={index} />;
