@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import JoinRepcultButton from "./JoinRepcultButton";
+import NavLinks from "./NavLinks";
 const Nav = () => {
   const isUserLoggedIn = true;
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -14,12 +15,8 @@ const Nav = () => {
       <Link href={`/`} className="font-bold text-2xl">
         Rapcult
       </Link>
-      <div className="sm:flex hidden gap-x-3">
-        <Link href={`/`}>How it works</Link>
-        <Link href={`/`}>How it works</Link>
-        <Link href={`/`}>How it works</Link>
-        <Link href={`/`}>How it works</Link>
-        <Link href={`/`}>How it works</Link>
+      <div className="sm:flex hidden">
+        <NavLinks />
       </div>
       <div className="sm:flex hidden">
         <JoinRepcultButton />
