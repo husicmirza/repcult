@@ -12,7 +12,7 @@ export default function JoinUs() {
           Join us, garner recognition,
           <br /> and stream your way to success
         </p>
-        <JoinRepcultButton />
+        <JoinRepcultButton text="Join Repcult" />
       </div>
     </React.Fragment>
   );

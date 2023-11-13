@@ -9,11 +9,13 @@ export default function Faq() {
         <h4 className="text-lg uppercase text-white">
           Frequently asked questions
         </h4>
-        <div className="border rounded-xl px-4">
-          {Array.from({ length: 6 }, (_, index) => {
+        <div className="border rounded-xl px-4 border-opacity-25 shadow-md border-white h-full flex flex-col justify-center">
+          {Array.from({ length: 7 }, (_, index) => {
             return (
               <div
-                className={`py-4  text-white ${index != 5 ? "border-b" : ""}`}
+                className={`py-4 text-sm text-white ${
+                  index != 6 ? "border-b" : ""
+                }`}
                 key={index}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit

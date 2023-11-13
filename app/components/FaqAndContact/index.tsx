@@ -1,6 +1,7 @@
 import React from "react";
 import JoinRepcultButton from "../JoinRepcultButton";
 import Faq from "./Faq";
+import Contact from "./Contact";
 
 export default function FaqAndContact() {
   return (
@@ -10,12 +11,11 @@ export default function FaqAndContact() {
           <h1 className="text-white font-bold text-4xl uppercase w-1/2">
             get your success story with rapcult
           </h1>
-          <JoinRepcultButton variant="secondary" />
+          <JoinRepcultButton text="Join Repcult" variant="secondary" />
         </div>
-        <div className="flex justify-between gap-x-14">
+        <div className="flex gap-x-14">
           <Faq />
-          <Faq />
-          {/* <Contact />{" "} */}
+          <Contact />
         </div>
       </div>
     </React.Fragment>

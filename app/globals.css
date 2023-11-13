@@ -15,3 +15,7 @@ body {
 .dropdown_link {
   @apply text-sm text-gray-700 hover:text-gray-500 font-medium;
 }
+
+.bg_secondary {
+  @apply bg-[#282c2c];
+}

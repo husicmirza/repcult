@@ -17,7 +17,7 @@ const Nav = () => {
         <NavLinks />
       </div>
       <div className="sm:flex hidden">
-        <JoinRepcultButton />
+        <JoinRepcultButton text="Join Repcult" />
       </div>
       <div className="sm:hidden flex relative">
         <div className="flex">

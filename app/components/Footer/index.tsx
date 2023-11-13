@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between w-full">
           <h3 className="text-xl text-white uppercase">Rapcult</h3>
-          <JoinRepcultButton />
+          <JoinRepcultButton text="Join Repcult" />
         </div>
         <div className="flex gap-x-24 mt-6">
           <div>

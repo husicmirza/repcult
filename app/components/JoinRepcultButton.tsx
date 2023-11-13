@@ -5,10 +5,12 @@ import React from "react";
 
 type Variants = "primary" | "secondary";
 interface JoinRepcultButtonProps {
+  text: string;
   variant?: Variants;
 }
 export default function JoinRepcultButton({
   variant = "primary",
+  text,
 }: JoinRepcultButtonProps) {
   const joinRepcultButtonClasses = clsx(
     "text-xs shadow uppercase z-20 font-semibold px-4 py-2",
@@ -19,8 +21,7 @@ export default function JoinRepcultButton({
   );
   return (
     <button className={joinRepcultButtonClasses}>
-      Join Rapcult
-      <FontAwesomeIcon icon={faArrowRight} size="lg" className="ml-2" />
+      {text} <FontAwesomeIcon icon={faArrowRight} size="lg" className="ml-2" />
     </button>
   );
 }

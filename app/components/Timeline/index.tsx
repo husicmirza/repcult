@@ -63,7 +63,7 @@ export default function Timeline() {
           </div>
         </div>
         <div className="flex justify-center">
-          <JoinRepcultButton />
+          <JoinRepcultButton text="Join Repcult" />
         </div>
       </div>
     </React.Fragment>
