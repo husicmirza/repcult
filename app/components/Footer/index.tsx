@@ -1,6 +1,6 @@
 import React from "react";
-import JoinRepcultButton from "./JoinRepcultButton";
-import NavLinks from "./NavLinks";
+import JoinRepcultButton from "../JoinRepcultButton";
+import NavLinks from "../NavLinks";
 
 export default function Footer() {
   return (

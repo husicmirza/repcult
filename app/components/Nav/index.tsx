@@ -3,8 +3,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useState } from "react";
-import JoinRepcultButton from "./JoinRepcultButton";
-import NavLinks from "./NavLinks";
+import JoinRepcultButton from "../JoinRepcultButton";
+import NavLinks from "../NavLinks";
 const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
 
