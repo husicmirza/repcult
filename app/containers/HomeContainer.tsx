@@ -2,6 +2,7 @@ import React from "react";
 import JoinUs from "../components/JoinUs";
 import AboutUs from "../components/AboutUs/index.tsx";
 import Timeline from "../components/Timeline";
+import FaqAndContact from "../components/FaqAndContact";
 
 export default function HomeContainer() {
   return (
@@ -9,6 +10,7 @@ export default function HomeContainer() {
       <JoinUs />
       <AboutUs />
       <Timeline />
+      <FaqAndContact />
     </>
   );
 }

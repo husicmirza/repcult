@@ -1,10 +1,24 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import clsx from "clsx";
 import React from "react";
 
-export default function JoinRepcultButton() {
+type Variants = "primary" | "secondary";
+interface JoinRepcultButtonProps {
+  variant?: Variants;
+}
+export default function JoinRepcultButton({
+  variant = "primary",
+}: JoinRepcultButtonProps) {
+  const joinRepcultButtonClasses = clsx(
+    "text-xs shadow uppercase z-20 font-semibold px-4 py-2",
+    {
+      "bg-red-500 shadow-red-600 text-white": variant === "primary",
+      "bg-white text-gray-900": variant === "secondary",
+    }
+  );
   return (
-    <button className="px-4 py-2 bg-red-500 uppercase text-xs shadowz shadow-red-600 font-semibold text-white z-20">
+    <button className={joinRepcultButtonClasses}>
       Join Rapcult
       <FontAwesomeIcon icon={faArrowRight} size="lg" className="ml-2" />
     </button>
