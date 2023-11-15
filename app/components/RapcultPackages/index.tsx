@@ -1,9 +1,29 @@
-import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
+"use client";
+import { faCircleLeft, faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useRef, useState } from "react";
 import PackageItem from "./PackageItem";
 
 export default function RapcultPackages() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const onButtonLeftClick = () => {
+    const slider = sliderRef.current;
+    if (slider) {
+      const width = slider.clientWidth;
+      setScrollLeft(scrollLeft - 320);
+      slider.scrollLeft = scrollLeft - width;
+    }
+  };
+  const onButtonRightClick = () => {
+    const slider = sliderRef.current;
+    if (slider) {
+      const width = slider.clientWidth;
+      setScrollLeft(scrollLeft + 320);
+      slider.scrollLeft = scrollLeft + width;
+    }
+  };
   return (
     <React.Fragment>
       <div className="flex flex-col items-center gap-y-6 rounded-3xl py-10 bg-[#282c2c] text-white w-full">
@@ -33,10 +53,27 @@ export default function RapcultPackages() {
             </div>
           </div>
         </div>
-        <div className="flex gap-x-6 py-4 overflow-x-scroll no-scrollbar w-2/3">
-          {Array.from({ length: 7 }, (_, index) => {
-            return <PackageItem packageNumber={index + 1} key={index} />;
-          })}
+        <div className="flex justify-evenly items-center w-full">
+          <FontAwesomeIcon
+            icon={faCircleLeft}
+            size="3x"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm"
+            onClick={onButtonLeftClick}
+          />
+          <div
+            className="flex gap-x-6 py-4 overflow-x-scroll no-scrollbar w-2/3"
+            ref={sliderRef}
+          >
+            {Array.from({ length: 10 }, (_, index) => {
+              return <PackageItem packageNumber={index + 1} key={index} />;
+            })}
+          </div>
+          <FontAwesomeIcon
+            icon={faCircleRight}
+            size="3x"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm"
+            onClick={onButtonRightClick}
+          />
         </div>
       </div>
     </React.Fragment>
