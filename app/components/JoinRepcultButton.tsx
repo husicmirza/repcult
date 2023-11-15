@@ -8,6 +8,7 @@ interface JoinRepcultButtonProps {
   text: string;
   variant?: Variants;
 }
+//TODO: refactor component name to Button
 export default function JoinRepcultButton({
   variant = "primary",
   text,
