@@ -14,9 +14,7 @@ import "swiper/css/free-mode";
 
 export default function RapcultPackages() {
   const swiperRef = useRef<SwiperRef>(null);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const initialSlideIndex = 1;
-  console.log(swiperRef);
+
   const onButtonLeftClick = () => {
     const swiperInstance = swiperRef.current?.swiper;
     if (swiperInstance) {
@@ -32,12 +30,6 @@ export default function RapcultPackages() {
     }
   };
 
-  useEffect(() => {
-    const swiperInstance = swiperRef.current?.swiper;
-    if (swiperInstance) {
-      swiperInstance.slideTo(initialSlideIndex);
-    }
-  }, [initialSlideIndex]);
   return (
     <React.Fragment>
       <div className="flex flex-col items-center gap-y-6 rounded-3xl py-10 bg-[#282c2c] text-white w-full">
