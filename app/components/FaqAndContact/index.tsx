@@ -1,5 +1,5 @@
 import React from "react";
-import JoinRepcultButton from "../JoinRepcultButton";
+import JoinRepcultButton from "../Button/JoinRepcultButton";
 import Faq from "./Faq";
 import Contact from "./Contact";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import JoinRepcultButton from "../JoinRepcultButton";
+import JoinRepcultButton from "../Button/JoinRepcultButton";
 
 export default function JoinUs() {
   return (

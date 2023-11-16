@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import JoinRepcultButton from "../JoinRepcultButton";
+import JoinRepcultButton from "../Button/JoinRepcultButton";
 import { useForm } from "react-hook-form";
 type FormValues = {
   firstName: string;
