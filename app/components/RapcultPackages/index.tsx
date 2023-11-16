@@ -1,29 +1,43 @@
 "use client";
 import { faCircleLeft, faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PackageItem from "./PackageItem";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { FreeMode, A11y } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
 
 export default function RapcultPackages() {
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const swiperRef = useRef<SwiperRef>(null);
   const [scrollLeft, setScrollLeft] = useState(0);
-
+  const initialSlideIndex = 1;
+  console.log(swiperRef);
   const onButtonLeftClick = () => {
-    const slider = sliderRef.current;
-    if (slider) {
-      const width = slider.clientWidth;
-      setScrollLeft(scrollLeft - 320);
-      slider.scrollLeft = scrollLeft - width;
+    const swiperInstance = swiperRef.current?.swiper;
+    if (swiperInstance) {
+      const targetIndex = swiperInstance.activeIndex - 1;
+      swiperInstance.slideTo(targetIndex);
     }
   };
   const onButtonRightClick = () => {
-    const slider = sliderRef.current;
-    if (slider) {
-      const width = slider.clientWidth;
-      setScrollLeft(scrollLeft + 320);
-      slider.scrollLeft = scrollLeft + width;
+    const swiperInstance = swiperRef.current?.swiper;
+    if (swiperInstance) {
+      const targetIndex = swiperInstance.activeIndex + 1;
+      swiperInstance.slideTo(targetIndex);
     }
   };
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current?.swiper;
+    if (swiperInstance) {
+      swiperInstance.slideTo(initialSlideIndex);
+    }
+  }, [initialSlideIndex]);
   return (
     <React.Fragment>
       <div className="flex flex-col items-center gap-y-6 rounded-3xl py-10 bg-[#282c2c] text-white w-full">
@@ -57,21 +71,32 @@ export default function RapcultPackages() {
           <FontAwesomeIcon
             icon={faCircleLeft}
             size="3x"
-            className="bg-white text-[#282c2c] rounded-full shadow-sm"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg border-2 cursor-pointer"
             onClick={onButtonLeftClick}
           />
-          <div
-            className="flex gap-x-6 py-4 overflow-x-scroll no-scrollbar w-2/3"
-            ref={sliderRef}
-          >
-            {Array.from({ length: 10 }, (_, index) => {
-              return <PackageItem packageNumber={index + 1} key={index} />;
-            })}
+          <div className="flex gap-x-6 py-4 overflow-x-scroll no-scrollbar w-2/3">
+            <Swiper
+              ref={swiperRef}
+              modules={[Pagination]}
+              freeMode={true}
+              spaceBetween={30}
+              centeredSlides={true}
+              initialSlide={1}
+              slidesPerView={3}
+            >
+              {Array.from({ length: 10 }, (_, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <PackageItem packageNumber={index + 1} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
           <FontAwesomeIcon
             icon={faCircleRight}
             size="3x"
-            className="bg-white text-[#282c2c] rounded-full shadow-sm"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg cursor-pointer border-2"
             onClick={onButtonRightClick}
           />
         </div>
