@@ -7,6 +7,7 @@ type Variants = "primary" | "secondary";
 interface JoinRepcultButtonProps {
   text: string;
   variant?: Variants;
+  onClick?: () => void;
 }
 //TODO: refactor component name to Button
 export default function JoinRepcultButton({
@@ -21,7 +22,7 @@ export default function JoinRepcultButton({
     }
   );
   return (
-    <button className={joinRepcultButtonClasses}>
+    <button className={joinRepcultButtonClasses} type="submit">
       {text} <FontAwesomeIcon icon={faArrowRight} size="lg" className="ml-2" />
     </button>
   );

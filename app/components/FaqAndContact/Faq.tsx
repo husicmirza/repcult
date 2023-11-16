@@ -1,8 +1,16 @@
+"use client";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Faq() {
+  const [collapsedItems, setCollapsedItems] = useState(Array(7).fill(true));
+
+  const handleToggleCollapse = (index: number) => {
+    const newCollapsedItems = Array(7).fill(true);
+    newCollapsedItems[index] = !newCollapsedItems[index];
+    setCollapsedItems(newCollapsedItems);
+  };
   return (
     <>
       <div className="flex flex-col items-center gap-y-3">
@@ -17,6 +25,7 @@ export default function Faq() {
                   index != 6 ? "border-b" : ""
                 }`}
                 key={index}
+                onClick={() => handleToggleCollapse(index)}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 <FontAwesomeIcon
@@ -25,6 +34,11 @@ export default function Faq() {
                   className="ml-4"
                   color="red"
                 />
+                {!collapsedItems[index] && (
+                  <div className="mt-1 text-gray-400 text-sm">
+                    Lorem ipsum dolor sit amet
+                  </div>
+                )}
               </div>
             );
           })}
