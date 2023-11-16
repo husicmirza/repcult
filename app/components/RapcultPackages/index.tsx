@@ -63,7 +63,7 @@ export default function RapcultPackages() {
           <FontAwesomeIcon
             icon={faCircleLeft}
             size="3x"
-            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg border-2 cursor-pointer"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg border-2 cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-grey-400 duration-300"
             onClick={onButtonLeftClick}
           />
           <div className="flex gap-x-6 py-4 overflow-x-scroll no-scrollbar w-2/3">
@@ -88,7 +88,7 @@ export default function RapcultPackages() {
           <FontAwesomeIcon
             icon={faCircleRight}
             size="3x"
-            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg cursor-pointer border-2"
+            className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg cursor-pointer border-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-grey-400 duration-300"
             onClick={onButtonRightClick}
           />
         </div>

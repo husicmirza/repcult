@@ -8,7 +8,7 @@ export default function PackageItem({
   packageNumber: number;
 }) {
   return (
-    <div className="border rounded-lg flex flex-col items-center max-w-xs px-10 bg-[#25282b] shadow-sm shadow-[#25282b] py-6 w-full border-[#25282b] gap-y-2">
+    <div className="border cursor-pointer rounded-lg flex flex-col transition ease-in-out delay-150 hover:-translate-y-1  hover:shadow-xl duration-300 items-center max-w-xs px-10 bg-[#25282b] shadow-sm shadow-[#25282b] py-6 w-full border-[#25282b] gap-y-2">
       <h4 className="text-gray-400 text-sm uppercase">
         package #{packageNumber}
       </h4>
