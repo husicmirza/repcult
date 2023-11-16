@@ -1,10 +1,9 @@
 "use client";
 import { faCircleLeft, faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import PackageItem from "./PackageItem";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { FreeMode, A11y } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 
 import "swiper/css";
