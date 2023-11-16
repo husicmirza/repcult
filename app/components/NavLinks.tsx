@@ -12,10 +12,10 @@ export default function NavLinks({ colDirection }: NavLinksProps) {
   return (
     <div className={navLinksClasess}>
       <Link href={`/`}>How it works</Link>
-      <Link href={`/`}>How it works</Link>
-      <Link href={`/`}>How it works</Link>
-      <Link href={`/`}>How it works</Link>
-      <Link href={`/`}>How it works</Link>
+      <Link href={`/`}>Packages</Link>
+      <Link href={`/`}>Success stories</Link>
+      <Link href={`/`}>About rapcult</Link>
+      <Link href={`/`}>join rapcult</Link>
     </div>
   );
 }
