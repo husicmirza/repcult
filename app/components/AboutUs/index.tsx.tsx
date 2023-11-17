@@ -1,5 +1,6 @@
 import React from "react";
 import AmazingBenefitCard from "./AmazingBenefitCard";
+import JoinCreativeCommunity from "../JoinCreativeCommunity";
 
 export default function AboutUs() {
   return (
@@ -20,6 +21,8 @@ export default function AboutUs() {
             );
           })}
         </div>
+        <JoinCreativeCommunity />
+
         <h2 className="text-2xl uppercase font-bold text-white">
           Amazing benefits
         </h2>

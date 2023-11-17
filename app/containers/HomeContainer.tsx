@@ -10,7 +10,7 @@ export default function HomeContainer() {
   return (
     <>
       <JoinUs />
-      <AboutUs />
+      <AboutUs />\
       <Timeline />
       <RapcultPackages />
       <SuccessStories />
