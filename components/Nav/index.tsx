@@ -1,10 +1,10 @@
 "use client";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Link from "next/link";
 import { useState } from "react";
 import JoinRepcultButton from "../Button/JoinRepcultButton";
 import NavLinks from "./NavLinks";
+import { FaBars } from "react-icons/fa";
 const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
 
@@ -21,9 +21,8 @@ const Nav = () => {
       </div>
       <div className="sm:hidden flex relative">
         <div className="flex">
-          <FontAwesomeIcon
-            icon={faBars}
-            size="xl"
+          <FaBars
+            size="32px"
             onClick={() => setToggleDropdown((prev) => !prev)}
           />
           {toggleDropdown && (

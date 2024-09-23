@@ -1,7 +1,7 @@
 "use client";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React, { useState } from "react";
+import { FaAngleDown } from "react-icons/fa";
 
 export default function Faq() {
   const [collapsedItems, setCollapsedItems] = useState(Array(7).fill(true));
@@ -21,19 +21,14 @@ export default function Faq() {
           {Array.from({ length: 7 }, (_, index) => {
             return (
               <div
-                className={`py-4 text-sm text-white ${
+                className={`py-4 text-sm text-white flex items-center justify-center ${
                   index != 6 ? "border-b" : ""
                 }`}
                 key={index}
                 onClick={() => handleToggleCollapse(index)}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  size="sm"
-                  className="ml-4"
-                  color="red"
-                />
+                <FaAngleDown className="ml-4" color="red" />
                 {!collapsedItems[index] && (
                   <div className="mt-1 text-gray-400 text-sm">
                     Lorem ipsum dolor sit amet

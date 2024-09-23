@@ -1,6 +1,5 @@
-import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { FaSquareArrowUpRight } from "react-icons/fa6";
 
 export default function SuccessStoryItem() {
   return (
@@ -24,30 +23,21 @@ export default function SuccessStoryItem() {
             <div className="flex flex-col font-semibold text-gray-400 uppercase">
               <p>
                 +1100,000
-                <FontAwesomeIcon
-                  icon={faSquareArrowUpRight}
-                  className="text-red-500 ml-2"
-                />{" "}
+                <FaSquareArrowUpRight className="text-red-500 ml-2" />
               </p>
               <span className="text-sm font-light">Streams</span>
             </div>
             <div className="flex flex-col font-semibold text-gray-400 uppercase">
               <p>
                 +1100,000
-                <FontAwesomeIcon
-                  icon={faSquareArrowUpRight}
-                  className="text-red-500 ml-2"
-                />{" "}
+                <FaSquareArrowUpRight className="text-red-500 ml-2" />{" "}
               </p>
               <span className="text-sm font-light">Streams</span>
             </div>
             <div className="flex flex-col font-semibold text-gray-400 uppercase">
               <p>
                 +1100,000
-                <FontAwesomeIcon
-                  icon={faSquareArrowUpRight}
-                  className="text-red-500 ml-2"
-                />{" "}
+                <FaSquareArrowUpRight className="text-red-500 ml-2" />{" "}
               </p>
               <span className="text-sm font-light">Streams</span>
             </div>

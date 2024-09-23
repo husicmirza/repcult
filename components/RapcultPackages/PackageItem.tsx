@@ -1,6 +1,5 @@
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 
 export default function PackageItem({
   packageNumber,
@@ -15,24 +14,28 @@ export default function PackageItem({
       <h2 className="text-4xl font-bold text-red-500 uppercase">Bronze</h2>
       <div className="h-1 w-full border-b border-gray-400"></div>
       <div className="flex flex-col gap-y-4 w-full mt-2">
-        <div className="flex items-center gap-x-3">
-          <FontAwesomeIcon icon={faCheck} className="text-red-500" size="sm" />
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
           <div className="text-gray-400">lorem ipsum</div>
         </div>
-        <div className="flex items-center gap-x-3">
-          <FontAwesomeIcon icon={faCheck} className="text-red-500" size="sm" />
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
           <div className="text-gray-400">lorem ipsum</div>
         </div>
-        <div className="flex items-center gap-x-3">
-          <FontAwesomeIcon icon={faCheck} className="text-red-500" size="sm" />
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
           <div className="text-gray-400">lorem ipsum</div>
         </div>
-        <div className="flex items-center gap-x-3">
-          <FontAwesomeIcon icon={faCheck} className="text-red-500" size="sm" />
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
           <div className="text-gray-400">lorem ipsum</div>
         </div>
-        <div className="flex items-center gap-x-3">
-          <FontAwesomeIcon icon={faCheck} className="text-red-500" size="sm" />
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
+          <div className="text-gray-400">lorem ipsum</div>
+        </div>
+        <div className="flex items-center justify-center gap-x-3">
+          <FaCheck className="text-red-500" size="24px" />
           <div className="text-gray-400">lorem ipsum</div>
         </div>
       </div>

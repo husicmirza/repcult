@@ -1,6 +1,5 @@
 "use client";
-import { faCircleLeft, faCircleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React, { useRef } from "react";
 import PackageItem from "./PackageItem";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
@@ -10,6 +9,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
+import {
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
 
 export default function RapcultPackages() {
   const swiperRef = useRef<SwiperRef>(null);
@@ -48,20 +51,18 @@ export default function RapcultPackages() {
                   className="bg-transparent border border-gray-500 py-3 px-2 w-full"
                   placeholder="John"
                 />
-                <FontAwesomeIcon
-                  icon={faCircleRight}
+                <FaRegArrowAltCircleRight
                   color="red"
-                  size="2xl"
-                  className="absolute right-2 top-2 bg-white rounded-full shadow-sm"
+                  size="24px"
+                  className="absolute right-2 top-2.5 bg-white rounded-full shadow-sm"
                 />
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-evenly items-center w-full">
-          <FontAwesomeIcon
-            icon={faCircleLeft}
-            size="3x"
+          <FaRegArrowAltCircleLeft
+            size="32px"
             className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg border-2 cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-grey-400 duration-300"
             onClick={onButtonLeftClick}
           />
@@ -84,9 +85,8 @@ export default function RapcultPackages() {
               })}
             </Swiper>
           </div>
-          <FontAwesomeIcon
-            icon={faCircleRight}
-            size="3x"
+          <FaRegArrowAltCircleRight
+            size="32px"
             className="bg-white text-[#282c2c] rounded-full shadow-sm hover:shadow-lg cursor-pointer border-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-grey-400 duration-300"
             onClick={onButtonRightClick}
           />
