@@ -30,9 +30,9 @@ export default function SuccessStories() {
               centeredSlides={true}
               initialSlide={1}
               slidesPerView={2}
-              style={{
-                "--swiper-pagination-color": "#fff",
-              }}
+              // style={{
+              //   "--swiper-pagination-color": "#fff",
+              // }}
             >
               {Array.from({ length: 3 }, (_, index) => {
                 return (
