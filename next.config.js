@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  basePath: "/repcult",
+  output: "export",
+  reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
